@@ -52,6 +52,31 @@
     document.getElementById('cookies-deny')?.addEventListener('click', () => close('deny'));
   }
 
+  // ====== MOBILE DRAWER ======
+  const burger = document.getElementById('nav-burger');
+  const drawer = document.getElementById('nav-drawer');
+  if (burger && drawer) {
+    const openDrawer = () => {
+      drawer.hidden = false;
+      burger.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    };
+    const closeDrawer = () => {
+      drawer.hidden = true;
+      burger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    };
+    burger.addEventListener('click', () => {
+      if (drawer.hidden) openDrawer(); else closeDrawer();
+    });
+    drawer.querySelectorAll('[data-drawer-close]').forEach((el) => {
+      el.addEventListener('click', closeDrawer);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !drawer.hidden) closeDrawer();
+    });
+  }
+
   // ====== MODAL ======
   let lastFocus = null;
   function openModal(id) {
