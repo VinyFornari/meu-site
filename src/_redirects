@@ -1,0 +1,3 @@
+# Pretty URLs for blog posts
+/blog/post/:slug   /blog/post.html?slug=:slug   200
+/blog/:cat         /blog/?cat=:cat              200

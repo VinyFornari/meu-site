@@ -1,0 +1,56 @@
+# Decap CMS configuration — VMF Blog
+# Docs: https://decapcms.org/docs/
+
+backend:
+  name: github
+  repo: VinyFornari/meu-site
+  branch: main
+  base_url: https://decap-auth-vmf.vinicius-mfornari.workers.dev
+  auth_endpoint: /auth
+
+# Media uploads (images dropped in the editor)
+media_folder: "src/content/uploads"
+public_folder: "/content/uploads"
+
+# Where to write/read content from in the repo
+collections:
+  - name: "posts"
+    label: "Artigos do Blog"
+    label_singular: "Artigo"
+    folder: "src/content/posts"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    summary: "{{title}} — {{date}}"
+    sortable_fields: ["date", "title"]
+    view_filters:
+      - label: "Tecnologia"
+        field: category
+        pattern: "Tecnologia"
+      - label: "Vendas"
+        field: category
+        pattern: "Vendas"
+      - label: "IA"
+        field: category
+        pattern: "Inteligência Artificial"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Subtítulo", name: "subtitle", widget: "string", required: false }
+      - { label: "Slug (URL)", name: "slug", widget: "string", hint: "Apelido sem espaços, ex: vendas-b2b-2026" }
+      - { label: "Data de publicação", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
+      - label: "Categoria"
+        name: "category"
+        widget: "select"
+        options:
+          - "Vendas"
+          - "Marketing"
+          - "Gestão"
+          - "Liderança"
+          - "Inteligência Artificial"
+          - "Negócios"
+          - "Tecnologia"
+          - "Empreendedorismo"
+      - { label: "Tempo de leitura (minutos)", name: "readingTime", widget: "number", value_type: "int", min: 1, max: 60, default: 5, required: false }
+      - { label: "Imagem de capa (opcional)", name: "cover", widget: "image", required: false }
+      - { label: "Conteúdo", name: "body", widget: "markdown" }
