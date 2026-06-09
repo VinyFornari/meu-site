@@ -45,9 +45,15 @@ Durante décadas, o trabalho de conhecimento se assemelhava à **manufatura pré
 
 **1. Recurso Plugável:** Qualquer expertise humana que ainda não tenha sido codificada nos agentes torna-se um **recurso plugável de alto valor**, mobilizado exatamente quando necessário pela linha de montagem.
 
+
+
 **2. Aprendizagem Incorporada:** Cada intervenção humana é capturada para uso futuro. Isso é semelhante a um desligamento do "Piloto Automático da Tesla" que gera dados de treinamento.
 
+
+
 **3. Aumento da Capacidade:** O local de trabalho é especificamente projetado para codificar expertise no fluxo de trabalho. Isso aumenta constantemente a maturidade dos agentes e expande a capacidade efetiva da organização.
+
+
 
 **4. Métricas e Foco:** Essa linha de montagem é vista como uma iniciativa perene. As métricas de sucesso mudam drasticamente, passando das medidas tradicionais de eficiência departamental (como negócios fechados ou tempo de lançamento no mercado) para a amplificação da expertise e um retorno real sobre o capital intelectual.
 
@@ -103,11 +109,19 @@ O papel dos agentes no Serviço-como-Software pode ser melhor compreendido ao im
 
 **1. Da API à Ação:** A governança deve evoluir do tradicional monitoramento de APIs para a governança de ações. Isso se torna essencial à medida que os agentes começam a tomar mais e mais ações, inicialmente chamando sistemas de registro através de Servidores MCP.
 
+
+
 **2. Gestão de Comportamento:** O novo modelo de governança deve gerenciar o comportamento e a intenção dos agentes. À medida que o acesso aos dados se amplia, as políticas precisam ser aplicadas dinamicamente e, em alguns casos, geradas dinamicamente.
+
+
 
 **3. Necessidade de Observabilidade Avançada:** A observabilidade deve avançar em sincronia com a segurança. A linhagem de dados tradicional (ou *data lineage*) é considerada insuficiente para esta nova era.
 
+
+
 **4. Rastreabilidade do Raciocínio:** Será necessária a observabilidade para agentes. Esse novo mecanismo deve ser capaz de capturar rastros de raciocínio e os dados específicos utilizados pelos agentes para tomar suas decisões.
+
+
 
 **5. Suporte à Conformidade:** Essa nova linhagem de dados e observabilidade avançada são fundamentais para suportar auditabilidade, segurança, conformidade e auditoria avançada. Além disso, em indústrias que exigem retenção de dados por anos, será necessário recriar e explicar as decisões tomadas pelos agentes.
 
@@ -119,9 +133,15 @@ Para avançar nesta transição fundamental, existem muitas peças faltantes que
 
 **1. Harmonização de Dados:** É essencial focar na harmonização e higiene de dados para que as empresas "coloquem a casa de dados em ordem".
 
+
+
 **2. Modelos de Precificação para Agentes:** O mercado ainda está experimentando. É necessário desenvolver modelos de precificação aceitável para as capacidades agênticas.
 
+
+
 **3. Interoperabilidade e Segurança de Agentes:** É crucial estabelecer padrões sobre como os agentes se comunicarão entre si (interoperabilidade) e como essas interações serão protegidas (segurança).
+
+
 
 **4. Observabilidade e Linhagem de Dados:** A observabilidade deve avançar em sincronia com a segurança. A linhagem de dados tradicional é considerada insuficiente. Será necessária a observabilidade para agentes, que deve capturar os rastros de raciocínio e os dados usados pelos agentes para tomar decisões. Esta nova linhagem é vital para apoiar a **auditabilidade, segurança, conformidade e rastreabilidade**, especialmente em indústrias que exigem a retenção de dados por anos e a capacidade de recriar e explicar as decisões dos agentes.
 
