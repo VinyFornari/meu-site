@@ -23,20 +23,31 @@ function parseFrontMatter(text) {
   return meta;
 }
 
+function toSlug(str) {
+  return str
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
 if (!fs.existsSync(POSTS_DIR)) {
-  console.log('Pasta posts/ não encontrada, criando posts.json vazio.');
+  console.log('Pasta posts/ nao encontrada, criando posts.json vazio.');
   fs.writeFileSync(OUT_FILE, JSON.stringify({ posts: [] }, null, 2) + '\n');
   process.exit(0);
 }
 
 const files = fs.readdirSync(POSTS_DIR).filter(f => f.endsWith('.md'));
-console.log(`Encontrados ${files.length} arquivo(s) .md`);
+console.log('Encontrados ' + files.length + ' arquivo(s) .md');
 
 const posts = files.map(f => {
   const txt  = fs.readFileSync(path.join(POSTS_DIR, f), 'utf-8');
   const meta = parseFrontMatter(txt);
+  const rawSlug = meta.slug || meta.title || f.replace(/\.md$/, '');
+  const slug = toSlug(rawSlug);
   return {
-    slug:        meta.slug        || f.replace(/\.md$/, ''),
+    slug,
     title:       meta.title       || '',
     subtitle:    meta.subtitle    || '',
     date:        meta.date        || '',
@@ -49,4 +60,4 @@ const posts = files.map(f => {
 posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
 fs.writeFileSync(OUT_FILE, JSON.stringify({ posts }, null, 2) + '\n');
-console.log(`posts.json atualizado com ${posts.length} post(s).`);
+console.log('posts.json atualizado com ' + posts.length + ' post(s).');
