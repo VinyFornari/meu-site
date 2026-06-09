@@ -2,6 +2,7 @@
   "posts": [
     {
       "slug": "servico-como-software",
+      "filename": "servico-como-software",
       "title": "Serviço como Software: o novo painel de controle para a gestão",
       "subtitle": "Como a próxima geração de SaaS está redesenhando a forma como",
       "date": "2025-03-15",
@@ -11,6 +12,7 @@
     },
     {
       "slug": "o-que-e-sales-enablement-e-como-ele-pode-ajudar-a-sua-empresa-a-vender-mais",
+      "filename": "o-que-é-sales-enablement-e-como-ele-pode-ajudar-a-sua-empresa-a-vender-mais",
       "title": "O que é Sales Enablement e como ele pode ajudar a sua empresa a vender mais?",
       "subtitle": "Conjunto de estratégias para a sua organização atingir suas metas de",
       "date": "2024-02-12",
