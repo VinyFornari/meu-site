@@ -122,13 +122,22 @@
   }
 
   // Fetch markdown + manifest in parallel
-  Promise.all([
-    fetch(`../content/posts/${slug}.md`, { cache: 'no-cache' }).then(r => {
-      if (!r.ok) throw new Error('not found');
-      return r.text();
-    }),
-    fetch('../content/posts.json', { cache: 'no-cache' }).then(r => r.json())
-  ])
+  // First get manifest to resolve the real filename, then fetch markdown
+  fetch('../content/posts.json', { cache: 'no-cache' })
+    .then(r => r.json())
+    .then(manifest => {
+      const posts = manifest.posts || [];
+      const postMeta = posts.find(p => p.slug === slug);
+      // Use filename from manifest if available, otherwise fall back to slug
+      const mdFile = (postMeta && postMeta.filename) ? postMeta.filename : slug;
+      return Promise.all([
+        fetch(`../content/posts/${encodeURIComponent(mdFile)}.md`, { cache: 'no-cache' }).then(r => {
+          if (!r.ok) throw new Error('not found');
+          return r.text();
+        }),
+        Promise.resolve(manifest)
+      ]);
+    })
     .then(([md, manifest]) => {
       const { meta, body } = parseFrontMatter(md);
       const posts = manifest.posts || [];
