@@ -1,6 +1,6 @@
 ---
 title: "Inteligência Emocional em Vendas: o diferencial que separa times comuns
-  de times vencedores"
+  de times vencedores "
 subtitle: Entenda como autoconhecimento, autocontrole e empatia transformam.
 slug: inteligencia-emocional-em-vendas
 date: 2026-02-09
