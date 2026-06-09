@@ -38,8 +38,7 @@ Durante décadas, o trabalho de conhecimento se assemelhava à **manufatura pré
 
 > Em resumo, essa estrutura operacional permite que a liderança direcione grandes aglomerados de agentes, **definindo o modelo operacional para a era dos agentes**.
 
-## \
-**3. O Novo Modelo de Negócios: Expertise Codificada**
+## **3. O Novo Modelo de Negócios: Expertise Codificada**
 
 O **Serviço-como-Software** marca uma mudança fundamental no **Modelo de Negócios**, migrando de um paradigma tradicional de serviços para uma economia baseada em plataforma.
 
