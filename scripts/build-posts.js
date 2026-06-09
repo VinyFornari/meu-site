@@ -42,12 +42,14 @@ const files = fs.readdirSync(POSTS_DIR).filter(f => f.endsWith('.md'));
 console.log('Encontrados ' + files.length + ' arquivo(s) .md');
 
 const posts = files.map(f => {
-  const txt  = fs.readFileSync(path.join(POSTS_DIR, f), 'utf-8');
-  const meta = parseFrontMatter(txt);
-  const rawSlug = meta.slug || meta.title || f.replace(/\.md$/, '');
-  const slug = toSlug(rawSlug);
+  const txt      = fs.readFileSync(path.join(POSTS_DIR, f), 'utf-8');
+  const meta     = parseFrontMatter(txt);
+  const rawSlug  = meta.slug || meta.title || f.replace(/\.md$/, '');
+  const slug     = toSlug(rawSlug);
+  const filename = f.replace(/\.md$/, ''); // nome real do arquivo (sem extensão)
   return {
     slug,
+    filename,   // ← usado pelo post.js para buscar o arquivo correto
     title:       meta.title       || '',
     subtitle:    meta.subtitle    || '',
     date:        meta.date        || '',
