@@ -6,25 +6,43 @@ const path = require('path');
 const POSTS_DIR = path.join(__dirname, '..', 'src', 'content', 'posts');
 const OUT_FILE  = path.join(__dirname, '..', 'src', 'content', 'posts.json');
 
+// Parser de front-matter que lida com valores YAML quebrados em várias linhas
+// (line folding). O editor quebra títulos/subtítulos longos em linhas indentadas;
+// elas fazem parte do mesmo valor e precisam ser juntadas com espaço.
 function parseFrontMatter(text) {
   const m = text.match(/^---\r?\n([\s\S]*?)\r?\n---/);
   if (!m) return {};
+  const lines = m[1].split(/\r?\n/);
   const meta = {};
-  m[1].split(/\r?\n/).forEach(line => {
-    const i = line.indexOf(':');
-    if (i === -1) return;
-    const key = line.slice(0, i).trim();
-    let val   = line.slice(i + 1).trim();
-    if (val.startsWith('"') && val.endsWith('"')) val = val.slice(1, -1);
-    if (val.startsWith("'") && val.endsWith("'")) val = val.slice(1, -1);
-    if (/^-?\d+$/.test(val)) val = parseInt(val, 10);
-    meta[key] = val;
-  });
+  let curKey = null;
+
+  for (const line of lines) {
+    // Linha nova "chave: valor" (sem indentação no início)
+    const keyMatch = line.match(/^([A-Za-z0-9_]+):(.*)$/);
+    if (keyMatch && !/^\s/.test(line)) {
+      curKey = keyMatch[1].trim();
+      meta[curKey] = keyMatch[2].trim();
+    } else if (curKey && /^\s+\S/.test(line)) {
+      // Linha de continuação (indentada) → faz parte do valor anterior
+      meta[curKey] += ' ' + line.trim();
+    }
+  }
+
+  // Remove aspas externas e converte números
+  for (const k in meta) {
+    let v = meta[k];
+    if ((v.startsWith('"') && v.endsWith('"')) ||
+        (v.startsWith("'") && v.endsWith("'"))) {
+      v = v.slice(1, -1);
+    }
+    if (/^-?\d+$/.test(v)) v = parseInt(v, 10);
+    meta[k] = v;
+  }
   return meta;
 }
 
 function toSlug(str) {
-  return str
+  return String(str)
     .toLowerCase()
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
@@ -49,7 +67,7 @@ const posts = files.map(f => {
   const filename = f.replace(/\.md$/, ''); // nome real do arquivo (sem extensão)
   return {
     slug,
-    filename,   // ← usado pelo post.js para buscar o arquivo correto
+    filename,
     title:       meta.title       || '',
     subtitle:    meta.subtitle    || '',
     date:        meta.date        || '',
