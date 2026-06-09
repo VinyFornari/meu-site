@@ -1,8 +1,8 @@
 ---
-title: "Planejamento estratégico que sai do papel: o guia completo para
+title: "Planejamento Estratégico que sai do papel: o guia completo para
   transformar planos em execução real"
-subtitle: "Um roteiro prático e aprofundado para conectar estratégia,
-  prioridades e rotina. "
+subtitle: Um roteiro prático e aprofundado para conectar estratégia, prioridades
+  e rotina.
 slug: planejamento-estrategico-que-sai-do-papel
 date: 2026-02-23
 category: Gestão
