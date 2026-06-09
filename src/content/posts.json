@@ -1,6 +1,16 @@
 {
   "posts": [
     {
+      "slug": "a-ilusao-do-pensar-complexidade-e-limites-dos-modelos-de-raciocinio",
+      "filename": "a-ilusão-do-raciocínio-desconstruindo-os-limites-dos-modelos-de-raciocínio-lrms",
+      "title": "\"A Ilusão do Raciocínio: Desconstruindo os Limites dos Modelos de",
+      "subtitle": "O colapso da precisão em IAs de fronteira.",
+      "date": "2026-06-09",
+      "category": "Inteligência Artificial",
+      "readingTime": 8,
+      "cover": ""
+    },
+    {
       "slug": "servico-como-software",
       "filename": "servico-como-software",
       "title": "Serviço como Software: o novo painel de controle para a gestão",
