@@ -1,7 +1,6 @@
 ---
 title: O que é Sales Enablement e como ele pode ajudar a sua empresa a vender mais?
-subtitle: Conjunto de estratégias para a sua organização atingir suas metas de
-  vendas e a melhorar a satisfação dos seus clientes.
+subtitle: Conjunto de estratégias para a sua organização atingir suas metas!
 slug: o-que-é-sales-enablement-e-como-ele-pode-ajudar-a-sua-empresa-a-vender-mais
 date: 2024-02-12
 category: Vendas
