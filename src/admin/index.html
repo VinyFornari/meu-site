@@ -1,17 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Painel — Vinícius M. Fornari</title>
-<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel — VMF Blog</title>
+  <script>window.CMS_MANUAL_INIT = true;</script>
 </head>
 <body>
-<!-- Decap CMS -->
-<script src="https://unpkg.com/decap-cms@^3.5.0/dist/decap-cms.js"></script>
+<script src="https://unpkg.com/decap-cms@3.3.3/dist/decap-cms.js"></script>
 <script>
-  // optional: customize preview styles to roughly match the site
-  // CMS.registerPreviewStyle('/styles.css');
+CMS.init({
+  config: {
+    load_config_file: false,
+    backend: {
+      name: 'github',
+      repo: 'VinyFornari/meu-site',
+      branch: 'main',
+      auth_type: 'pkce',
+      app_id: 'Ov23limECNG5fH1QGxPu'
+    },
+    media_folder: 'src/content/uploads',
+    public_folder: '/content/uploads',
+    collections: [{
+      name: 'posts',
+      label: 'Artigos do Blog',
+      label_singular: 'Artigo',
+      folder: 'src/content/posts',
+      create: true,
+      slug: '{{slug}}',
+      extension: 'md',
+      format: 'frontmatter',
+      summary: '{{title}} — {{date}}',
+      fields: [
+        { label: 'Título',         name: 'title',       widget: 'string' },
+        { label: 'Subtítulo',      name: 'subtitle',    widget: 'string',   required: false },
+        { label: 'Slug (URL)',     name: 'slug',        widget: 'string',   hint: 'Sem espaços, ex: vendas-b2b-2026' },
+        { label: 'Data',           name: 'date',        widget: 'datetime', format: 'YYYY-MM-DD', date_format: 'DD/MM/YYYY', time_format: false },
+        { label: 'Categoria',      name: 'category',    widget: 'select',
+          options: ['Vendas','Marketing','Gestão','Liderança','Inteligência Artificial','Negócios','Tecnologia','Empreendedorismo'] },
+        { label: 'Leitura (min)',  name: 'readingTime', widget: 'number',   value_type: 'int', min: 1, max: 60, default: 5, required: false },
+        { label: 'Imagem de capa', name: 'cover',       widget: 'image',    required: false },
+        { label: 'Conteúdo',       name: 'body',        widget: 'markdown' }
+      ]
+    }]
+  }
+});
 </script>
 </body>
 </html>
