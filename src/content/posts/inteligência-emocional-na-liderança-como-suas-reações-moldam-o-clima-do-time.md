@@ -8,8 +8,6 @@ date: 2026-03-23
 category: Liderança
 readingTime: 14
 ---
-# Inteligência emocional na liderança: como suas reações moldam o clima do time
-
 A maioria dos líderes acredita que o clima do time é resultado de fatores externos: a pressão por metas, o cliente difícil, a equipe desmotivada, o mercado instável. É mais confortável enxergar assim. O problema é que essa leitura ignora a variável mais determinante de todas, que é a própria reação do líder diante desses fatores. O time não responde só ao que acontece. Ele responde, principalmente, a como você reage ao que acontece.
 
 Inteligência emocional na liderança não é um tema "soft" ou secundário. É o mecanismo que define se um problema vira aprendizado ou pânico, se um erro vira conversa ou demissão silenciosa de engajamento, se a pressão vira foco ou paralisia. Cada microexpressão sua, cada suspiro impaciente, cada e-mail escrito com raiva às onze da noite, tudo isso é lido pela equipe como um sinal de "como as coisas funcionam aqui".
