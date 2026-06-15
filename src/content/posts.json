@@ -1,6 +1,16 @@
 {
   "posts": [
     {
+      "slug": "ia-pequenas-medias-empresas-guia-pratico-comecar",
+      "filename": "ia-para-pequenas-e-médias-empresas-o-guia-prático-para-começar-a-ganhar-tempo-e-dinheiro",
+      "title": "IA para pequenas e médias empresas: o guia prático para começar a ganhar tempo e dinheiro",
+      "subtitle": "As perguntas que todo dono de PME faz sobre inteligência artificial, respondidas na ordem certa, com foco no que realmente cabe num negócio de orçamento curto e equipe enxuta.",
+      "date": "2026-06-14",
+      "category": "Inteligência Artificial",
+      "readingTime": 16,
+      "cover": ""
+    },
+    {
       "slug": "a-ilusao-do-pensar-complexidade-e-limites-dos-modelos-de-raciocinio",
       "filename": "a-ilusão-do-raciocínio-desconstruindo-os-limites-dos-modelos-de-raciocínio-lrms",
       "title": "Desconstruindo os Limites dos Modelos de Raciocínio (LRMs)",
