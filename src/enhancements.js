@@ -1,4 +1,4 @@
-// Reveal-on-scroll + cookie banner + modal
+// Reveal-on-scroll + cookie banner + mobile drawer
 (function () {
   // Reveal on scroll — auto-tag main blocks
   const revealSelectors = [
@@ -77,78 +77,4 @@
     });
   }
 
-  // ====== MODAL ======
-  let lastFocus = null;
-  function openModal(id) {
-    const modal = document.querySelector(`[data-modal="${id}"]`);
-    if (!modal) return;
-    lastFocus = document.activeElement;
-    modal.hidden = false;
-    document.body.style.overflow = 'hidden';
-    // focus first input
-    setTimeout(() => {
-      const first = modal.querySelector('input, button');
-      first?.focus();
-    }, 50);
-  }
-  function closeModal(modal) {
-    if (!modal) return;
-    modal.hidden = true;
-    document.body.style.overflow = '';
-    // reset success/form state for next open
-    const form = modal.querySelector('form');
-    const success = modal.querySelector('.modal__success');
-    if (form && success) {
-      form.hidden = false;
-      success.hidden = true;
-      form.reset();
-    }
-    lastFocus?.focus?.();
-  }
-  document.querySelectorAll('[data-modal-open]').forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      openModal(btn.getAttribute('data-modal-open'));
-    });
-  });
-  document.querySelectorAll('[data-modal-close]').forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      closeModal(btn.closest('.modal'));
-    });
-  });
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      document.querySelectorAll('.modal:not([hidden])').forEach(closeModal);
-    }
-  });
-
-  // Notify form
-  const notifyForm = document.getElementById('book-notify-form');
-  if (notifyForm) {
-    notifyForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const fd = new FormData(notifyForm);
-      const data = {
-        name: fd.get('name')?.toString().trim(),
-        email: fd.get('email')?.toString().trim(),
-        phone: fd.get('phone')?.toString().trim(),
-        ts: new Date().toISOString(),
-        book: 'Alta Performance em Vendas B2B',
-      };
-      if (!data.name || !data.email || !data.phone) return;
-      // Persist locally — production wiring would POST to a backend / Mailchimp / etc.
-      try {
-        const list = JSON.parse(localStorage.getItem('vmf_book_notify') || '[]');
-        list.push(data);
-        localStorage.setItem('vmf_book_notify', JSON.stringify(list));
-      } catch (_) {}
-      const modal = notifyForm.closest('.modal');
-      const success = modal?.querySelector('.modal__success');
-      if (success) {
-        notifyForm.hidden = true;
-        success.hidden = false;
-      }
-    });
-  }
 })();
