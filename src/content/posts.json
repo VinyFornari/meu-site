@@ -11,6 +11,116 @@
       "cover": ""
     },
     {
+      "slug": "rituais-comerciais",
+      "filename": "rituais-comerciais-as-reuniões-que-mantêm-o-time-no-ritmo-e-as-que-podem-sumir",
+      "title": "Rituais comerciais: as reuniões que mantêm o time no ritmo (e as que podem sumir)",
+      "subtitle": "Um guia para revisar a agenda do time de vendas, manter os encontros que realmente fazem as oportunidades andarem e eliminar os que só consomem tempo de quem deveria estar com o cliente.",
+      "date": "2026-11-16",
+      "category": "Gestão",
+      "readingTime": 10,
+      "cover": ""
+    },
+    {
+      "slug": "retencao-e-expansao",
+      "filename": "retenção-e-expansão-por-que-o-segundo-contrato-vale-mais-que-o-primeiro",
+      "title": "Retenção e expansão: por que o segundo contrato vale mais que o primeiro",
+      "subtitle": "Muitas empresas B2B concentram energia em conquistar clientes novos e tratam a renovação como consequência natural. Veja por que essa lógica está invertida e como estruturar a carteira para crescer dentro de quem já compra de você.",
+      "date": "2026-11-02",
+      "category": "Negócios",
+      "readingTime": 10,
+      "cover": ""
+    },
+    {
+      "slug": "objecoes-esta-caro",
+      "filename": "objeções-em-vendas-b2b-o-que-o-cliente-realmente-quer-dizer-com-está-caro",
+      "title": "Objeções em vendas B2B: o que o cliente realmente quer dizer com “está caro”",
+      "subtitle": "Por trás da objeção mais comum em vendas existem pelo menos cinco mensagens diferentes. Saber qual delas o cliente está enviando muda completamente a forma de responder.",
+      "date": "2026-10-19",
+      "category": "Vendas",
+      "readingTime": 10,
+      "cover": ""
+    },
+    {
+      "slug": "precificacao-servico-b2b",
+      "filename": "precificação-para-quem-vende-serviço-b2b-como-parar-de-cobrar-pouco",
+      "title": "Precificação para quem vende serviço B2B: como parar de cobrar pouco",
+      "subtitle": "Por que tantas empresas de serviço cobram abaixo do que entregam, como sair do cálculo de horas e construir um preço que sustenta o negócio, e como conversar sobre isso com clientes novos e antigos.",
+      "date": "2026-10-05",
+      "category": "Empreendedorismo",
+      "readingTime": 10,
+      "cover": ""
+    },
+    {
+      "slug": "crm-que-o-time-usa",
+      "filename": "crm-que-o-time-usa-de-verdade-como-implantar-sem-virar-burocracia",
+      "title": "CRM que o time usa de verdade: como implantar sem virar burocracia",
+      "subtitle": "O que separa um CRM que vira ferramenta de trabalho de um CRM que vira cadastro abandonado, e um caminho prático para implantar o sistema com o time a favor, e não contra.",
+      "date": "2026-09-21",
+      "category": "Tecnologia",
+      "readingTime": 12,
+      "cover": ""
+    },
+    {
+      "slug": "marketing-vendas-alinhados-qualidade-dos-leads",
+      "filename": "marketing-e-vendas-alinhados-como-acabar-com-a-briga-sobre-a-qualidade-dos-leads",
+      "title": "Marketing e vendas alinhados: como acabar com a briga sobre a qualidade dos leads",
+      "subtitle": "Por que a discussão entre as duas áreas quase nunca é sobre os leads em si, e como critérios compartilhados, acordos claros e um ciclo de retorno constante transformam a disputa em trabalho conjunto.",
+      "date": "2026-09-07",
+      "category": "Marketing",
+      "readingTime": 10,
+      "cover": ""
+    },
+    {
+      "slug": "venda-complexa-negociacao-varios-decisores",
+      "filename": "venda-complexa-como-conduzir-uma-negociação-com-vários-decisores",
+      "title": "Venda complexa: como conduzir uma negociação com vários decisores",
+      "subtitle": "Como mapear o comitê de compra, entender o que cada pessoa ganha e arrisca com a decisão e conduzir o processo de forma que a negociação não dependa de um único contato do lado do cliente.",
+      "date": "2026-08-24",
+      "category": "Vendas",
+      "readingTime": 10,
+      "cover": ""
+    },
+    {
+      "slug": "feedback-que-muda-comportamento-do-time",
+      "filename": "como-dar-feedback-que-realmente-muda-o-comportamento-do-time",
+      "title": "Como dar feedback que realmente muda o comportamento do time",
+      "subtitle": "O que separa a conversa que gera mudança daquela que só gera desconforto, e um caminho prático para preparar, conduzir e acompanhar feedbacks que fazem diferença no dia a dia.",
+      "date": "2026-08-10",
+      "category": "Liderança",
+      "readingTime": 10,
+      "cover": ""
+    },
+    {
+      "slug": "ia-time-comercial-onde-ajuda-onde-atrapalha",
+      "filename": "ia-no-time-comercial-onde-ela-ajuda-de-verdade-e-onde-atrapalha",
+      "title": "IA no time comercial: onde ela ajuda de verdade (e onde atrapalha)",
+      "subtitle": "Um olhar honesto sobre as tarefas de vendas em que a inteligência artificial já devolve tempo e qualidade, e sobre aquelas em que ela cria ruído, risco e clientes irritados.",
+      "date": "2026-07-27",
+      "category": "Inteligência Artificial",
+      "readingTime": 10,
+      "cover": ""
+    },
+    {
+      "slug": "pipeline-previsao-vendas-numeros-semanais-gestor",
+      "filename": "pipeline-e-previsão-de-vendas-os-números-que-o-gestor-comercial-precisa-olhar-toda-semana",
+      "title": "Pipeline e previsão de vendas: os números que o gestor comercial precisa olhar toda semana",
+      "subtitle": "Como sair da revisão de funil que só lista oportunidades e passar a usar poucos números, olhados com regularidade, para prever a receita com mais segurança e agir antes do fim do mês.",
+      "date": "2026-07-13",
+      "category": "Gestão",
+      "readingTime": 11,
+      "cover": ""
+    },
+    {
+      "slug": "pesquisa-antes-reuniao-vendas-b2b-prompts-ia",
+      "filename": "o-que-pesquisar-antes-de-uma-reunião-de-vendas-b2b-com-prompts-prontos-de-ia",
+      "title": "O que pesquisar antes de uma reunião de vendas B2B, com prompts prontos de IA",
+      "subtitle": "Um roteiro prático para chegar à primeira conversa sabendo o que importa sobre a empresa, as pessoas e o contexto do cliente, usando inteligência artificial para ganhar tempo sem abrir mão da checagem.",
+      "date": "2026-06-29",
+      "category": "Vendas",
+      "readingTime": 12,
+      "cover": ""
+    },
+    {
       "slug": "ia-pequenas-medias-empresas-guia-pratico-comecar",
       "filename": "ia-para-pequenas-e-médias-empresas-o-guia-prático-para-começar-a-ganhar-tempo-e-dinheiro",
       "title": "IA para pequenas e médias empresas: o guia prático para começar a ganhar tempo e dinheiro",
