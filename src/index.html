@@ -225,11 +225,126 @@
     <h2 class="mats__title">
       Conteúdo para quem leva <em>vendas</em> a sério.
     </h2>
-    <p class="mats__sub">Dois materiais que organizam, na prática, o que aprendi conduzindo operações comerciais ao longo dos anos.</p>
+    <p class="mats__sub">Três materiais que organizam, na prática, o que aprendi conduzindo operações comerciais ao longo dos anos.</p>
   </div>
 
   <div class="mats__grid" data-layout="side">
-    <!-- ===== Material 1: eBook ===== -->
+    <!-- ===== Material 1: Livro impresso ===== -->
+    <article class="mat-card mat-card--book" data-kind="book">
+      <header class="mat-card__top">
+        <span class="mat-card__type">
+          <span class="dot"></span>
+          Livro impresso
+        </span>
+        <span class="mat-card__source">Amazon</span>
+      </header>
+
+      <div class="mat-card__cover-wrap">
+        <span class="mat-card__cover-tick mat-card__cover-tick--tl" aria-hidden="true"></span>
+        <span class="mat-card__cover-tick mat-card__cover-tick--br" aria-hidden="true"></span>
+        <div class="mat-card__cover-shadow" aria-hidden="true"></div>
+        <div class="mat-card__book">
+          <span class="mat-card__book-pages" aria-hidden="true"></span>
+          <img class="mat-card__cover" src="images/capa-livro.png" alt="Capa do livro Alta Performance em Vendas B2B" loading="lazy">
+        </div>
+      </div>
+
+      <div class="mat-card__body">
+        <h3 class="mat-card__title">Alta Performance em Vendas B2B</h3>
+        <p class="mat-card__subtitle">Técnicas e estratégias para conduzir negociações com excelência.</p>
+
+        <p class="mat-card__lede">
+          A maioria dos profissionais de vendas sabe argumentar. <strong>Poucos sabem conduzir.</strong>
+        </p>
+
+        <p class="mat-card__p">
+          Há uma diferença real entre quem apresenta uma proposta e quem constrói uma decisão. Entre quem reage ao cliente e quem lê o cenário antes de entrar na sala. Entre quem fecha por insistência e quem fecha porque construiu confiança ao longo do processo.
+        </p>
+
+        <p class="mat-card__p">
+          Este livro organiza esse caminho. Preparação, negociação, persuasão, fechamento, operação comercial e gestão de conflitos são tratados não como etapas isoladas, mas como partes de uma mesma <em>arquitetura</em> — que transforma esforço em consistência e talento individual em capacidade sustentável de vender.
+        </p>
+
+        <div class="mat-card__section">
+          <p class="mat-card__section-title">Para quem é</p>
+          <p class="mat-card__list-p">Profissionais de vendas, gestores comerciais, executivos e empreendedores que atuam em mercados exigentes e buscam uma visão mais completa, estruturada e sólida da atividade comercial.</p>
+        </div>
+
+        <div class="mat-card__foot mat-card__cta-wrap">
+          <a class="btn btn--solid mat-card__cta" id="book-cta"
+             href="https://wa.me/5516997557604?text=Ol%C3%A1%2C%20Vinicius!%20Quero%20comprar%20o%20livro%20Alta%20Performance%20em%20Vendas%20B2B."
+             target="_blank" rel="noopener"
+             title="Você vai iniciar uma conversa no WhatsApp para comprar o livro."
+             aria-label="Fale com vendas. Você vai iniciar uma conversa no WhatsApp para comprar o livro.">
+            <svg class="btn__wa" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.15 1.6 5.96L0 24l6.3-1.65a11.9 11.9 0 0 0 5.76 1.47h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.16-3.45-8.44zM12.07 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.74.98 1-3.64-.24-.37a9.86 9.86 0 0 1-1.51-5.27c0-5.45 4.44-9.89 9.9-9.89 2.64 0 5.13 1.03 7 2.9a9.82 9.82 0 0 1 2.89 7c0 5.45-4.44 9.88-9.89 9.88zm5.43-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg>
+            <span>Fale com vendas</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <p class="mat-card__cta-hint">Você vai iniciar uma conversa no WhatsApp para comprar o livro.</p>
+        </div>
+      </div>
+    </article>
+
+    <!--
+      IA na Operação Comercial
+      Pílula e checkout ficam só nestes dois atributos:
+        data-platform  — texto da pílula (hoje: Hotmart)
+        data-cta-href  — link de checkout da Hotmart. O script abre em nova aba.
+    -->
+    <article class="mat-card" data-kind="ebook-ia" data-material="ia-operacao" data-platform="Hotmart" data-cta-href="https://pay.hotmart.com/B108579080S">
+      <header class="mat-card__top">
+        <span class="mat-card__type">
+          <span class="dot"></span>
+          eBook digital
+        </span>
+        <span class="mat-card__source" data-platform-label>Hotmart</span>
+      </header>
+
+      <div class="mat-card__cover-wrap">
+        <span class="mat-card__novo">Novo</span>
+        <span class="mat-card__cover-tick mat-card__cover-tick--tl" aria-hidden="true"></span>
+        <span class="mat-card__cover-tick mat-card__cover-tick--br" aria-hidden="true"></span>
+        <div class="mat-card__cover-shadow" aria-hidden="true"></div>
+        <div class="mat-card__book">
+          <span class="mat-card__book-pages" aria-hidden="true"></span>
+          <img class="mat-card__cover" src="images/capa-ebook-ia.png" alt="Capa do eBook IA na Operação Comercial" width="1200" height="1800" loading="lazy">
+        </div>
+      </div>
+
+      <div class="mat-card__body">
+        <h3 class="mat-card__title">IA na Operação Comercial</h3>
+        <p class="mat-card__subtitle">Um guia prático para vendas B2B complexas: dados, processo e critério antes da ferramenta.</p>
+
+        <p class="mat-card__lede">
+          A IA já mudou como o comprador pesquisa, compara e decide. Este guia mostra onde ela entra em cada etapa da venda complexa, o que continua sendo trabalho humano e como implantar com dados, processo e governança, sem cair na promessa da ferramenta mágica.
+        </p>
+
+        <div class="mat-card__section">
+          <p class="mat-card__section-title">O que você vai aprender</p>
+          <ul class="mat-card__list">
+            <li>O mapa da IA nas 8 etapas da venda complexa.</li>
+            <li>Como priorizar carteira e personalizar contato sem perder escala.</li>
+            <li>Copilotos e agentes: o que delegar e o que manter com o vendedor.</li>
+            <li>Dados, governança e LGPD aplicados ao comercial.</li>
+            <li>Biblioteca com 24 prompts prontos e roteiro de 90 dias.</li>
+          </ul>
+        </div>
+
+        <div class="mat-card__section">
+          <p class="mat-card__section-title">Para quem é</p>
+          <p class="mat-card__list-p">Gestores comerciais, executivos e profissionais de vendas B2B que querem usar IA com critério e resultado.</p>
+        </div>
+
+        <div class="mat-card__foot">
+          <a class="btn btn--solid mat-card__cta" data-cta href="#">
+            <span>Quero o ebook</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== Material 3: eBook ===== -->
     <article class="mat-card" data-kind="ebook">
       <header class="mat-card__top">
         <span class="mat-card__type">
@@ -271,69 +386,39 @@
           <p class="mat-card__list-p">Empreendedores, gestores e profissionais de vendas que buscam crescimento estratégico e previsível.</p>
         </div>
 
-        <a class="btn btn--solid mat-card__cta" href="https://vinicius-mfornari.hotmart.host/como-vender-de-forma-inteligente-e-escalavel-892a50e6-f3ae-4403-98ab-919147678bfb" target="_blank" rel="noopener">
-          <span>Adquira a sua cópia</span>
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-      </div>
-    </article>
-
-    <!-- ===== Material 2: Livro ===== -->
-    <article class="mat-card mat-card--book" data-kind="book">
-      <header class="mat-card__top">
-        <span class="mat-card__type">
-          <span class="dot"></span>
-          Livro impresso
-        </span>
-        <span class="mat-card__source">Amazon</span>
-      </header>
-
-      <div class="mat-card__cover-wrap">
-        <span class="mat-card__cover-tick mat-card__cover-tick--tl" aria-hidden="true"></span>
-        <span class="mat-card__cover-tick mat-card__cover-tick--br" aria-hidden="true"></span>
-        <div class="mat-card__cover-shadow" aria-hidden="true"></div>
-        <div class="mat-card__book">
-          <span class="mat-card__book-pages" aria-hidden="true"></span>
-          <img class="mat-card__cover" src="images/capa-livro.png" alt="Capa do livro Alta Performance em Vendas B2B" loading="lazy">
-        </div>
-      </div>
-
-      <div class="mat-card__body">
-        <h3 class="mat-card__title">Alta Performance em Vendas B2B</h3>
-        <p class="mat-card__subtitle">Técnicas e estratégias para conduzir negociações com excelência.</p>
-
-        <p class="mat-card__lede">
-          A maioria dos profissionais de vendas sabe argumentar. <strong>Poucos sabem conduzir.</strong>
-        </p>
-
-        <p class="mat-card__p">
-          Há uma diferença real entre quem apresenta uma proposta e quem constrói uma decisão. Entre quem reage ao cliente e quem lê o cenário antes de entrar na sala. Entre quem fecha por insistência e quem fecha porque construiu confiança ao longo do processo.
-        </p>
-
-        <p class="mat-card__p">
-          Este livro organiza esse caminho. Preparação, negociação, persuasão, fechamento, operação comercial e gestão de conflitos são tratados não como etapas isoladas, mas como partes de uma mesma <em>arquitetura</em> — que transforma esforço em consistência e talento individual em capacidade sustentável de vender.
-        </p>
-
-        <div class="mat-card__section">
-          <p class="mat-card__section-title">Para quem é</p>
-          <p class="mat-card__list-p">Profissionais de vendas, gestores comerciais, executivos e empreendedores que atuam em mercados exigentes e buscam uma visão mais completa, estruturada e sólida da atividade comercial.</p>
-        </div>
-
-        <div class="mat-card__cta-wrap">
-          <a class="btn btn--solid mat-card__cta" id="book-cta"
-             href="https://wa.me/5516997557604?text=Ol%C3%A1%2C%20Vinicius!%20Quero%20comprar%20o%20livro%20Alta%20Performance%20em%20Vendas%20B2B."
-             target="_blank" rel="noopener"
-             title="Você vai iniciar uma conversa no WhatsApp para comprar o livro."
-             aria-label="Fale com vendas. Você vai iniciar uma conversa no WhatsApp para comprar o livro.">
-            <svg class="btn__wa" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.15 1.6 5.96L0 24l6.3-1.65a11.9 11.9 0 0 0 5.76 1.47h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.16-3.45-8.44zM12.07 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.74.98 1-3.64-.24-.37a9.86 9.86 0 0 1-1.51-5.27c0-5.45 4.44-9.89 9.9-9.89 2.64 0 5.13 1.03 7 2.9a9.82 9.82 0 0 1 2.89 7c0 5.45-4.44 9.88-9.89 9.88zm5.43-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg>
-            <span>Fale com vendas</span>
+        <div class="mat-card__foot">
+          <a class="btn btn--solid mat-card__cta" href="https://vinicius-mfornari.hotmart.host/como-vender-de-forma-inteligente-e-escalavel-892a50e6-f3ae-4403-98ab-919147678bfb" target="_blank" rel="noopener">
+            <span>Adquira a sua cópia</span>
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <p class="mat-card__cta-hint">Você vai iniciar uma conversa no WhatsApp para comprar o livro.</p>
         </div>
       </div>
     </article>
   </div>
+
+  <script id="mat-ia-config">
+    /* Aplica data-platform e data-cta-href do card IA na Operação Comercial. */
+    (function () {
+      var card = document.querySelector('[data-material="ia-operacao"]');
+      if (!card) return;
+      var platform = card.getAttribute("data-platform") || "Hotmart";
+      var href = card.getAttribute("data-cta-href") || "#";
+      var pill = card.querySelector("[data-platform-label]");
+      var cta = card.querySelector("[data-cta]");
+      if (pill) pill.textContent = platform;
+      if (!cta) return;
+      cta.setAttribute("href", href);
+      if (href !== "#") {
+        cta.setAttribute("target", "_blank");
+        cta.setAttribute("rel", "noopener");
+      } else {
+        cta.setAttribute("href", "#");
+        cta.addEventListener("click", function (event) {
+          event.preventDefault();
+        });
+      }
+    })();
+  </script>
 </section>
 
 <!-- ============ FOOTER ============ -->
