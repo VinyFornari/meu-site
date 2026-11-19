@@ -5,6 +5,7 @@
 // O Cloudflare Pages publica src/ e o comando de build do projeto é:
 //   if [ -f scripts/cache-bust.js ]; then node scripts/cache-bust.js; fi
 // Os hashes também ficam commitados, então o site funciona mesmo sem esse passo.
+// O passeio inclui todo HTML novo em src/ (landings como ebook-ia/ e como-vender/).
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
