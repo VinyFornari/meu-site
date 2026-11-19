@@ -1106,17 +1106,46 @@ body[data-theme="light"] .mats { background: #e9e8e3; }
 
 .mats__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  max-width: 1400px;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 680px;
   margin: 0 auto;
+  align-items: stretch;
+}
+/* Tablet: book + new ebook side by side, older ebook centered below. */
+@media (min-width: 900px) {
+  .mats__grid {
+    grid-template-columns: 1fr 1fr;
+    max-width: 1040px;
+    gap: 20px;
+  }
+  .mats__grid > .mat-card:last-child {
+    grid-column: 1 / -1;
+    width: calc(50% - 10px);
+    justify-self: center;
+  }
+}
+/* Desktop: three equal columns, same order as the stack. */
+@media (min-width: 1240px) {
+  .mats__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 1400px;
+    gap: 18px;
+  }
+  .mats__grid > .mat-card:last-child {
+    grid-column: auto;
+    width: auto;
+    justify-self: stretch;
+  }
 }
 .mats__grid[data-layout="stack"] {
   grid-template-columns: 1fr;
-  max-width: 980px;
+  max-width: 680px;
 }
-@media (max-width: 980px) {
-  .mats__grid { grid-template-columns: 1fr; }
+.mats__grid[data-layout="stack"] > .mat-card:last-child {
+  grid-column: auto;
+  width: auto;
+  justify-self: stretch;
 }
 
 .mat-card {
@@ -1303,6 +1332,7 @@ body[data-theme="light"] .mat-card__cover-wrap::before {
   flex-direction: column;
   gap: 18px;
   padding: 4px 4px 8px;
+  flex: 1;
 }
 .mat-card__title {
   font-family: var(--display);
@@ -1397,14 +1427,23 @@ body[data-theme="light"] .mat-card__cover-wrap::before {
   align-self: flex-start;
   margin-top: 4px;
 }
+.mat-card__foot,
 .mat-card__cta-wrap {
+  margin-top: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
 }
+.mat-card__foot .mat-card__cta,
 .mat-card__cta-wrap .mat-card__cta {
   margin-top: 0;
+}
+/* Side-by-side cards share a button baseline; the book hint sits in this slot. */
+@media (min-width: 900px) {
+  .mats__grid:not([data-layout="stack"]) .mat-card__foot {
+    min-height: 118px;
+  }
 }
 .btn__wa {
   flex: 0 0 auto;
@@ -1418,8 +1457,61 @@ body[data-theme="light"] .mat-card__cover-wrap::before {
   color: var(--fg-faint);
 }
 @media (max-width: 420px) {
-  .mat-card__cta-wrap .btn {
+  .mat-card__cta-wrap .btn,
+  .mat-card__foot .btn {
     white-space: normal;
+  }
+}
+
+/* Black cover needs a faint edge so the book reads on the dark frame. */
+.mat-card[data-kind="ebook-ia"] .mat-card__cover {
+  box-shadow:
+    inset 12px 0 18px -8px rgba(0,0,0,0.9),
+    inset 16px 0 0 -14px rgba(255,255,255,0.16),
+    inset 0 0 0 1px rgba(255,255,255,0.2);
+}
+.mat-card__novo {
+  position: absolute;
+  z-index: 3;
+  top: 12px;
+  right: 12px;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  line-height: 1;
+  color: var(--accent);
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid color-mix(in srgb, var(--accent) 65%, transparent);
+  border-radius: var(--radius-pill);
+  padding: 5px 8px 4px;
+  pointer-events: none;
+}
+body[data-theme="light"] .mat-card__novo {
+  background: rgba(255, 255, 255, 0.82);
+}
+
+@media (min-width: 1240px) {
+  .mat-card {
+    padding: 22px;
+    gap: 18px;
+  }
+  .mat-card__title {
+    font-size: 26px;
+  }
+  .mat-card__subtitle {
+    font-size: 17px;
+  }
+  .mat-card__cover-wrap {
+    aspect-ratio: 5 / 4;
+    padding: 16px 12px;
+  }
+  .mat-card__lede,
+  .mat-card__p,
+  .mat-card__list li,
+  .mat-card__list-p {
+    font-size: 14px;
   }
 }
 
