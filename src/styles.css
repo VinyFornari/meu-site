@@ -2172,21 +2172,20 @@ body.links-page {
   box-shadow: 0 0 0 6px var(--accent-soft), 0 18px 40px -18px var(--accent-glow);
 }
 .lb-avatar picture {
-  position: relative;
   display: block;
   width: 100%;
   height: 100%;
   border-radius: 50%;
   overflow: hidden;
 }
-/* Square crop of foto-vmf (1025×1535) centered on the face: source (110, 80, 780). */
 .lb-avatar__photo {
-  position: absolute;
-  width: 131.4103%;
+  display: block;
+  width: 100%;
+  height: 100%;
   max-width: none;
-  height: auto;
-  left: -14.1026%;
-  top: -10.2564%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
 }
 
 .lb-name {
