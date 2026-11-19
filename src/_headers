@@ -1,0 +1,35 @@
+# HTML is revalidated so a new styles.css?v= / script ?v= is picked up after each deploy.
+# Fingerprinted CSS and JS keep the platform cache. /admin stays on Decap as-is.
+
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/links
+  Cache-Control: public, max-age=0, must-revalidate
+
+/links/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/blog
+  Cache-Control: public, max-age=0, must-revalidate
+
+/blog/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/blog/post
+  Cache-Control: public, max-age=0, must-revalidate
+
+/blog/post/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/blog/post/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/admin
+  Cache-Control: public, max-age=0, must-revalidate
+
+/admin/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
