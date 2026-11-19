@@ -1456,6 +1456,28 @@ body[data-theme="light"] .mat-card__cover-wrap::before {
   line-height: 1.45;
   color: var(--fg-faint);
 }
+.mat-card__more {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 4px 2px;
+  font-size: 13.5px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--fg-dim);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+.mat-card__more:hover {
+  color: var(--fg);
+  border-bottom-color: var(--accent);
+}
+.mat-card__more:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
 @media (max-width: 420px) {
   .mat-card__cta-wrap .btn,
   .mat-card__foot .btn {
@@ -2596,6 +2618,17 @@ body.lp-page {
   letter-spacing: -0.045em;
 }
 
+.lp-hero__copy,
+.lp-hero__figure,
+.lp-hero__line {
+  min-width: 0;
+}
+
+/* Longer titles wrap inside the column. */
+.lp-hero__title--long {
+  font-size: clamp(32px, 8.2vw, 58px);
+}
+
 .lp-hero__line--light {
   font-weight: 300;
 }
@@ -2648,6 +2681,10 @@ body.lp-page {
   filter:
     drop-shadow(0 0 1px rgba(255, 255, 255, 0.22))
     drop-shadow(0 28px 40px rgba(0, 0, 0, 0.55));
+}
+
+.lp-hero__cover--stage {
+  width: min(92vw, 440px);
 }
 
 /* Quote band */
@@ -2983,6 +3020,10 @@ body.lp-page {
     gap: clamp(40px, 5vw, 72px);
   }
 
+  .lp-hero__grid--stage {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 1.05fr);
+  }
+
   .lp-hero__figure {
     justify-content: flex-end;
   }
@@ -2991,8 +3032,16 @@ body.lp-page {
     width: min(100%, 460px);
   }
 
+  .lp-hero__cover--stage {
+    width: min(100%, 540px);
+  }
+
   .lp-hero__title {
     font-size: clamp(52px, 4.6vw, 72px);
+  }
+
+  .lp-hero__title--long {
+    font-size: clamp(42px, 3.5vw, 58px);
   }
 }
 

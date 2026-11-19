@@ -10,6 +10,18 @@
 /links/
   Cache-Control: public, max-age=0, must-revalidate
 
+/ebook-ia
+  Cache-Control: public, max-age=0, must-revalidate
+
+/ebook-ia/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/como-vender
+  Cache-Control: public, max-age=0, must-revalidate
+
+/como-vender/
+  Cache-Control: public, max-age=0, must-revalidate
+
 /blog
   Cache-Control: public, max-age=0, must-revalidate
 
