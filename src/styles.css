@@ -1117,6 +1117,8 @@ body[data-theme="light"] .mats { background: #e9e8e3; }
 }
 @media (max-width: 980px) {
   .mats__grid { grid-template-columns: 1fr; }
+  /* Stacked column: printed book first, e-book below. Side-by-side desktop stays source order. */
+  .mats__grid > .mat-card[data-kind="book"] { order: -1; }
 }
 
 .mat-card {
