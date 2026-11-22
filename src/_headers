@@ -22,6 +22,12 @@
 /como-vender/
   Cache-Control: public, max-age=0, must-revalidate
 
+/livro
+  Cache-Control: public, max-age=0, must-revalidate
+
+/livro/
+  Cache-Control: public, max-age=0, must-revalidate
+
 /blog
   Cache-Control: public, max-age=0, must-revalidate
 
