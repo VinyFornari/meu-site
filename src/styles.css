@@ -2544,8 +2544,9 @@ body.links-page {
 }
 
 /* ============== E-BOOK LANDING (lp-) ==============
-   Shared by ebook sales pages. Copy the folder (ebook-ia/) and swap
-   copy, images and the checkout URL. Do not put the product name in these classes.
+   Shared by the sales pages (ebook-ia/, como-vender/, livro/).
+   Copy the folder and swap copy, images and the checkout URL.
+   Do not put the product name in these classes.
 */
 body.lp-page {
   color-scheme: dark;
@@ -2554,11 +2555,13 @@ body.lp-page {
 .lp-hero,
 .lp-band,
 .lp-pull,
+.lp-section,
 .lp-author,
 .lp-offer,
 .lp-guarantee,
 .lp-price,
-.lp-faq {
+.lp-faq,
+.lp-close {
   scroll-margin-top: 88px;
 }
 
@@ -2588,6 +2591,20 @@ body.lp-page {
 .lp-page summary:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
+}
+
+.lp-prose a,
+.lp-section a:not(.btn) {
+  color: var(--fg);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 0.18em;
+}
+
+.lp-prose a:hover,
+.lp-section a:not(.btn):hover {
+  color: var(--accent);
 }
 
 /* Hero */
@@ -2633,12 +2650,61 @@ body.lp-page {
   font-weight: 300;
 }
 
+.lp-hero__copy .lp-hero__kicker {
+  display: inline-block;
+  margin: 0 0 16px;
+  padding: 5px 10px 4px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-pill);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  line-height: 1.4;
+  color: var(--accent);
+}
+
+.lp-hero__copy .lp-hero__sub {
+  margin: -4px 0 18px;
+  max-width: 34ch;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(20px, 2.5vw, 26px);
+  line-height: 1.3;
+  color: var(--fg);
+  text-wrap: pretty;
+}
+
+.lp-hero__copy .lp-hero__highlight {
+  margin: 0 0 16px;
+  max-width: 16em;
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(22px, 2.6vw, 28px);
+  line-height: 1.22;
+  letter-spacing: -0.03em;
+  color: var(--fg);
+  text-wrap: pretty;
+}
+
 .lp-hero__copy p {
   margin: 0 0 16px;
   max-width: 62ch;
   font-size: 16.5px;
   line-height: 1.65;
   color: var(--fg-mid);
+  text-wrap: pretty;
+}
+
+.lp-hero__copy .lp-hero__meta {
+  margin: -6px 0 0;
+  max-width: 24ch;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.55;
+  color: var(--fg-dim);
   text-wrap: pretty;
 }
 
@@ -2798,6 +2864,150 @@ body.lp-page {
   margin-bottom: 0;
 }
 
+/* Content blocks added between the quote and the author bio */
+.lp-section {
+  padding: clamp(56px, 7vw, 96px) var(--pad-x);
+}
+
+.lp-section--ink {
+  background: var(--bg-strong);
+}
+
+.lp-section__inner {
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.lp-section__title {
+  margin: 0 0 22px;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.lp-section__title::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 2px;
+  margin-top: 14px;
+  background: var(--accent);
+}
+
+.lp-section__intro {
+  margin: 0;
+  max-width: 65ch;
+  font-size: 16.5px;
+  line-height: 1.65;
+  color: var(--fg-mid);
+  text-wrap: pretty;
+}
+
+.lp-section__note {
+  margin: 22px 0 0;
+  max-width: 65ch;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--fg-mid);
+  text-wrap: pretty;
+}
+
+.lp-list {
+  list-style: none;
+  margin: 22px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.lp-list li {
+  position: relative;
+  padding-left: 26px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--fg-mid);
+  text-wrap: pretty;
+}
+
+.lp-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 9px;
+  height: 9px;
+  border-left: 1.6px solid var(--accent);
+  border-bottom: 1.6px solid var(--accent);
+  transform: rotate(-45deg);
+}
+
+.lp-list--plain li::before {
+  width: 12px;
+  height: 2px;
+  top: 0.72em;
+  border: 0;
+  background: var(--accent);
+  transform: none;
+}
+
+.lp-entries {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+}
+
+.lp-entries li {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.lp-entries li:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.lp-entries h3 {
+  margin: 0 0 6px;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+.lp-entries__num {
+  display: inline-block;
+  margin-right: 10px;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+}
+
+.lp-entries p {
+  margin: 0;
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: var(--fg-mid);
+  text-wrap: pretty;
+}
+
+.lp-aside {
+  margin: 22px 0 0;
+  padding: 16px 18px;
+  border-left: 2px solid var(--accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: var(--accent-soft);
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: var(--fg-mid);
+  text-wrap: pretty;
+}
+
 /* Offer bar */
 .lp-offer {
   background: #161616;
@@ -2860,6 +3070,10 @@ body.lp-page {
   font-weight: 800;
 }
 
+.lp-guarantee__copy {
+  min-width: 0;
+}
+
 .lp-guarantee__copy p {
   margin: 0;
   font-size: 16.5px;
@@ -2881,6 +3095,16 @@ body.lp-page {
   background: #141414;
   border: 1px solid var(--line-strong);
   border-radius: var(--radius-lg);
+}
+
+.lp-price__title {
+  margin: 0 0 14px;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(26px, 3.4vw, 34px);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
 }
 
 .lp-price__lead {
@@ -2926,6 +3150,17 @@ body.lp-page {
   letter-spacing: 0.08em;
   line-height: 1.55;
   color: var(--fg-faint);
+}
+
+.lp-price__note--talk {
+  max-width: 34ch;
+  margin-inline: auto;
+  font-family: var(--body);
+  font-size: 13.5px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.45;
+  color: var(--fg-dim);
 }
 
 /* FAQ */
@@ -2999,6 +3234,27 @@ body.lp-page {
   font-size: 15.5px;
   line-height: 1.65;
   color: var(--fg-mid);
+}
+
+.lp-close {
+  padding: clamp(64px, 8vw, 112px) var(--pad-x);
+  background: var(--bg-strong);
+  text-align: center;
+}
+
+.lp-close p {
+  max-width: 16em;
+  margin: 0 auto;
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(26px, 3.6vw, 40px);
+  line-height: 1.18;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.lp-close .lp-buy {
+  margin-top: 28px;
 }
 
 @media (min-width: 800px) {
